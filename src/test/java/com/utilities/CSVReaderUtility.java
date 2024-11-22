@@ -17,7 +17,7 @@ public class CSVReaderUtility {
 	public static Iterator<User> readCSVFile(String fileName) {
 
 		// D:\Automation\Ui-Automation-Project-2024\Java-Automation\testData\loginData.csv
-		File csvFile = new File(System.getProperty("user.dir") + "\\testData\\"+fileName);
+		File csvFile = new File(System.getProperty("user.dir") + "//testData//"+fileName);
 		FileReader fileReader = null;
 		CSVReader csvReader;
 		String[] line;
