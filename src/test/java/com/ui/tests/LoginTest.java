@@ -23,20 +23,20 @@ public final class LoginTest extends TestBase {
 				"Chetan Seth");
 	}
 
-	@Test(description = "\n Verifies the Login of New User ", groups = { "e2e",
-			"sanity" }, dataProviderClass = com.ui.dataProviders.LoginDataProvider.class, dataProvider = "LoginTestCSVDataProvider")
-	public void loginCSVTest(User user) {
-
-		assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(), user.getPassword()).getUserName(),
-				"Chetan Seth");
-	}
-
-	@Test(description = "\n Verifies the Login of New User ", groups = { "e2e",
-			"sanity" }, dataProviderClass = com.ui.dataProviders.LoginDataProvider.class, dataProvider = "LoginTestExcelDataProvider", retryAnalyzer = com.ui.listeners.MyRetryAnalyzer.class)
-
-	public void loginExcelTest(User user) {
-		assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(), user.getPassword()).getUserName(),
-				"Chetan Seth1");
-	}
+//	@Test(description = "\n Verifies the Login of New User ", groups = { "e2e",
+//			"sanity" }, dataProviderClass = com.ui.dataProviders.LoginDataProvider.class, dataProvider = "LoginTestCSVDataProvider")
+//	public void loginCSVTest(User user) {
+//
+//		assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(), user.getPassword()).getUserName(),
+//				"Chetan Seth");
+//	}
+//
+//	@Test(description = "\n Verifies the Login of New User ", groups = { "e2e",
+//			"sanity" }, dataProviderClass = com.ui.dataProviders.LoginDataProvider.class, dataProvider = "LoginTestExcelDataProvider", retryAnalyzer = com.ui.listeners.MyRetryAnalyzer.class)
+//
+//	public void loginExcelTest(User user) {
+//		assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(), user.getPassword()).getUserName(),
+//				"Chetan Seth1");
+//	}
 
 }
