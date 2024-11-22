@@ -1,6 +1,6 @@
 package com.ui.pages;
 
-import static com.constants.Env.QA;
+import static com.constants.Env.*;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
