@@ -6,7 +6,6 @@ import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.ui.pages.TestBase;
 import com.ui.pojo.User;
 import com.utilities.LoggerUtility;
 

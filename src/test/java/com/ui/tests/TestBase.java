@@ -1,6 +1,4 @@
-package com.ui.pages;
-
-import static com.constants.Browser.CHROME;
+package com.ui.tests;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
