@@ -1,30 +1,23 @@
 Test Automation Framework
-This is a Java-based test automation framework designed for robust, scalable, and maintainable test automation.
+This is a Java-based test automation framework designed for robust and maintainable test automation.
 
-The framework leverages various libraries and tools to facilitate data-driven testing, logging, reporting, and integration with cloud-based testing platforms.
+Overview
+The framework supports automation for both UI and API testing. It includes features such as data-driven testing, cross-browser testing, headless mode execution, detailed logging, and reporting. The framework can also integrate with cloud-based platforms for scalable test execution.
 
-About the Framework
-This framework supports automation testing for both UI and API with features such as:
-
-Functional and Regression Testing.
-Cross-browser and Headless mode support.
-Seamless integration with cloud-based platforms for scalability.
-Easy-to-read test data and configuration management.
 Prerequisites
-Before running this framework, ensure the following software is installed on your system:
+Before using this framework, ensure the following are installed:
 
-Java 11: Ensure Java is installed, and the JAVA_HOME environment variable is set.
-Maven: Ensure Maven is installed and added to the system path. Download from https://maven.apache.org/download.cgi
+Java 11: Ensure the JAVA_HOME environment variable is set.
+Maven: Add Maven to your system path.
+Download: https://maven.apache.org/download.cgi
 Features
-
-Data-Driven Testing: Utilizes libraries like OpenCSV, Apache POI, and Gson for managing test data from CSV, Excel, and JSON files.
-Cross-Browser Testing: Allows tests to run on different browsers.
-Headless Mode: Enables faster execution by running tests in headless mode.
-Cloud Testing: Integrated with cloud platforms like LambdaTest for scalable test execution.
+Data-Driven Testing: Supports reading test data from CSV, Excel, and JSON.
+Cross-Browser Testing: Run tests on various browsers.
+Headless Mode: Faster execution using headless browsers.
+Cloud Testing: Integrates with cloud platforms like LambdaTest.
 Logging: Generates detailed logs using Log4j.
-Reporting: Produces comprehensive reports with Extent Reports.
+Reporting: Provides HTML reports with Extent Reports.
 Technologies Used
-
 Java 11
 TestNG
 OpenCSV
@@ -35,33 +28,20 @@ LambdaTest
 Log4j
 Extent Reports
 Setup Instructions
-
 Clone the repository:
-git clone <repository-url>
-cd <repository-folder>
-
-Running Tests:
-
+bash
+Copy code
+git clone <repository-url>  
+cd <repository-folder>  
+Run tests:
 On LambdaTest:
-mvn test -Dbrowser=chrome -DisLambdaTest=true -DisHeadless=false -X
-
-On Chrome (Local) in Headless Mode:
-mvn test -Dbrowser=chrome -DisLambdaTest=false -DisHeadless=true -X
-
+bash
+Copy code
+mvn test -Dbrowser=chrome -DisLambdaTest=true -DisHeadless=false  
+On Local Chrome in Headless Mode:
+bash
+Copy code
+mvn test -Dbrowser=chrome -DisLambdaTest=false -DisHeadless=true  
 Reports and Logs
-
-Reports: After execution, a detailed HTML report is generated at ./report.html, which includes test execution details and screenshots for failures.
-Logs: Logs are created during test execution and stored in the ./logs/ directory.
-Continuous Integration
-This framework is integrated with GitHub Actions for automated test execution.
-
-Schedule: Tests are executed daily at 09:00 AM IST.
-Reports: Generated reports are archived in a designated branch (e.g., gh-pages).
-Example Commands
-
-View Reports via GitHub Actions:
-https://<your-github-username>.github.io/<repository-name>/report.html
-
-View Reports via Jenkins:
-https://<your-github-username>.github.io/<repository-name>/extent-reports/report.html
-
+Reports: A detailed HTML report will be generated after execution (e.g., ./report.html).
+Logs: Logs are stored in the ./logs/ directory during test execution.
