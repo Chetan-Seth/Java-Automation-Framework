@@ -45,5 +45,5 @@ Before running this framework, ensure the following software is installed on you
 
 1. **Clone the Repository**:
    ```bash
-   git clone <repository-url>
-   cd <repository-folder>
+   git clone https://github.com/Chetan-Seth/UI-Test-Automation-Framework.git
+   cd Automation-Framework
