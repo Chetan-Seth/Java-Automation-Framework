@@ -1,47 +1,49 @@
-Test Automation Framework
+# Test Automation Framework
+
 This is a Java-based test automation framework designed for robust and maintainable test automation.
 
-Overview
-The framework supports automation for both UI and API testing. It includes features such as data-driven testing, cross-browser testing, headless mode execution, detailed logging, and reporting. The framework can also integrate with cloud-based platforms for scalable test execution.
+The framework leverages various libraries and tools to facilitate data-driven testing, logging, reporting, and integration with cloud-based testing platforms like LambdaTest.
 
-Prerequisites
-Before using this framework, ensure the following are installed:
+---
 
-Java 11: Ensure the JAVA_HOME environment variable is set.
-Maven: Add Maven to your system path.
-Download: https://maven.apache.org/download.cgi
-Features
-Data-Driven Testing: Supports reading test data from CSV, Excel, and JSON.
-Cross-Browser Testing: Run tests on various browsers.
-Headless Mode: Faster execution using headless browsers.
-Cloud Testing: Integrates with cloud platforms like LambdaTest.
-Logging: Generates detailed logs using Log4j.
-Reporting: Provides HTML reports with Extent Reports.
-Technologies Used
-Java 11
-TestNG
-OpenCSV
-Gson
-Apache POI
-Faker
-LambdaTest
-Log4j
-Extent Reports
-Setup Instructions
-Clone the repository:
-bash
-Copy code
-git clone <repository-url>  
-cd <repository-folder>  
-Run tests:
-On LambdaTest:
-bash
-Copy code
-mvn test -Dbrowser=chrome -DisLambdaTest=true -DisHeadless=false  
-On Local Chrome in Headless Mode:
-bash
-Copy code
-mvn test -Dbrowser=chrome -DisLambdaTest=false -DisHeadless=true  
-Reports and Logs
-Reports: A detailed HTML report will be generated after execution (e.g., ./report.html).
-Logs: Logs are stored in the ./logs/ directory during test execution.
+## Prerequisites
+
+Before running this framework, ensure the following software is installed on your system:
+
+- **Java 11**: Make sure Java is installed, and the `JAVA_HOME` environment variable is set.
+- **Maven**: Ensure Maven is installed and added to the system path.
+  - [Download Maven](https://maven.apache.org/download.cgi)
+
+---
+
+## Features
+
+- **Data-Driven Testing**: Supports reading test data from CSV, Excel, and JSON files using libraries like OpenCSV, Apache POI, and Gson.
+- **Cross-Browser Testing**: Run tests on different browsers.
+- **Headless Mode**: Faster execution by running tests in headless mode.
+- **Cloud Testing**: Integrated with LambdaTest to run tests on the cloud.
+- **Logging**: Detailed logging using Log4j.
+- **Reporting**: Generates comprehensive HTML reports using Extent Reports.
+
+---
+
+## Technologies Used
+
+- Java 11
+- TestNG
+- OpenCSV
+- Gson
+- Apache POI
+- Faker
+- LambdaTest
+- Log4j
+- Extent Reports
+
+---
+
+## Setup Instructions
+
+1. **Clone the Repository**:
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
