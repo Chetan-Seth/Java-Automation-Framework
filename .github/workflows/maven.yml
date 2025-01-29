@@ -1,16 +1,16 @@
 name: Test Automation WorkFlow
 
 on:
-  schedule:
-  - cron: 00 18 * * *
   push:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+  schedule:
+    - cron: 00 18 * * *  # Schedule exists but won't trigger due to condition
 
 jobs:
   build:
-
+    if: github.event_name != 'schedule'  # Prevents execution from schedule
     runs-on: ubuntu-latest
 
     steps:
@@ -27,7 +27,7 @@ jobs:
     - name: Running Test Automation Framework with Maven
       run: mvn test -X -Dbrowser=chrome -DisLambdaTest=false -DisHeadless=true
      
-    - name: Upload  Test logs
+    - name: Upload Test logs
       if: always()
       uses: actions/upload-artifact@v4.4.3
       with:
